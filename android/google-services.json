@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "830446389934",
+    "project_id": "invasive-pollution",
+    "storage_bucket": "invasive-pollution.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830446389934:android:ecbc39550c2291955cbb3f",
+        "android_client_info": {
+          "package_name": "pe.netdreams.invasive_pollution"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "830446389934-a74qatrcfkd8srfd8oasdnlsuqrb8c09.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc9OASpX3GX9w1JPTi9pAlbrWkBm69o5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "830446389934-a74qatrcfkd8srfd8oasdnlsuqrb8c09.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

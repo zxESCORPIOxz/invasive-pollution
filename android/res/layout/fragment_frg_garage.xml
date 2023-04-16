@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_defauld"
+    android:orientation="vertical"
+    tools:context=".Fragments.frg_garage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/contNaves"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangulo_bottom_purple_acent"
+            android:gravity="center_horizontal|center_vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangulo_bottom_purple"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="5dp">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:padding="5dp"
+                    android:text="GARAJE"
+                    android:drawableStart="@drawable/tab_garage"
+                    android:paddingHorizontal="50dp"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contNaveSet"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/contNaves"
+            android:layout_above="@id/contBotones"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/ivnave"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/nave" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contBotones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/contListas"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/btnnaves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Nave"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/tab_naves"
+                android:drawablePadding="10dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:background="@drawable/rectangulo_top_purple_light"
+                />
+            <TextView
+                android:id="@+id/btnarmas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Cañon"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/tab_armas"
+                android:drawablePadding="10dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:background="@drawable/rectangulo_top_purple_light"
+                />
+            <TextView
+                android:id="@+id/btnbalas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Munición"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/tab_balas"
+                android:drawablePadding="10dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:background="@drawable/rectangulo_top_purple_light"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contListas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/contDetalle"
+            android:background="@color/purple_acent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNaves"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/item_nave_list" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGuns"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/item_gun_list" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAmmos"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/item_ammo_list" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:background="@color/purple_acent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvblindage"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/frm_rec_purple"
+                    android:drawableTop="@drawable/ic_blindaje"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="100"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvvida"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/frm_rec_purple"
+                    android:drawableTop="@drawable/ic_vida"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="100"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvcadencia"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/frm_rec_purple"
+                    android:drawableTop="@drawable/ic_velocidad"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="100"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvdamage"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/frm_rec_purple"
+                    android:drawableTop="@drawable/ic_damage"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="100"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

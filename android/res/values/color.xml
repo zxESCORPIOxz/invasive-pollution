@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    <color name="ic_background_color">#FFFFFFFF</color>-->
+<!--    <color name="white">#FFFFFF</color>-->
+<!--    <color name="black">#000000</color>-->
+<!--    <color name="gray">#BABABA</color>-->
+<!--    <color name="gray_dark">#686868</color>-->
+<!--    <color name="red">#FF0000</color>-->
+
+    <color name="ic_background_color">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_ts">#D9FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#D3D3D3</color>
+    <color name="gray_dark">#686868</color>
+    <color name="red">#FF0000</color>
+    <color name="purple">#1F0D3F</color>
+    <color name="purple_ligtn">#7369F0</color>
+    <color name="purple_ligtn_ts">#B37369F0</color>
+    <color name="purple_acent">#3C3E6F</color>
+    <color name="orange">#F49239</color>
+
+    <color name="transparent">#00000000</color>
+</resources>
